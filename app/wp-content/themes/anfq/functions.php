@@ -120,7 +120,9 @@ add_action( 'widgets_init', 'anfq_widgets_init' );
  * Enqueue scripts and styles.
  */
 function anfq_scripts() {
-	wp_enqueue_style( 'anfq-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'anfq-style', get_stylesheet_uri() );
+  
+  wp_enqueue_style( 'anfq-custom-style', get_template_directory_uri() . '/dist/css/style.css' );
 
 	wp_enqueue_script( 'anfq-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

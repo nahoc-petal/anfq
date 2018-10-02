@@ -19,7 +19,7 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // Configuration
 var config = require('./package.json').gulp;
-var themePath = 'wp-content/themes/' + config.theme;
+var themePath = 'app/wp-content/themes/' + config.theme;
 var distPath  = themePath + '/dist';
 var distPathAbsolute = '/' + distPath;
 var assetPath = themePath + '/assets';
