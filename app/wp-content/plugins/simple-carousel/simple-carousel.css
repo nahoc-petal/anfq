@@ -1,0 +1,84 @@
+div.carousel {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden; }
+  div.carousel div.control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 64px; }
+    div.carousel div.control button {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: none;
+      cursor: pointer; }
+  div.carousel div.control.prev {
+    left: 0; }
+    div.carousel div.control.prev:hover {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent); }
+      div.carousel div.control.prev:hover button {
+        background: url("images/arrow-prev.png") no-repeat center left; }
+  div.carousel div.control.next {
+    right: 0; }
+    div.carousel div.control.next:hover {
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.25), transparent); }
+      div.carousel div.control.next:hover button {
+        background: url("images/arrow-next.png") no-repeat center right; }
+  div.carousel:hover div.skip-links {
+    opacity: 1; }
+  div.carousel div.skip-links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    text-align: center;
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out; }
+    @media screen and (max-width: 960px) {
+      div.carousel div.skip-links {
+        opacity: 1; } }
+    div.carousel div.skip-links button.skip {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      border-radius: 100%;
+      margin: 0 12px;
+      cursor: pointer;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      div.carousel div.skip-links button.skip:hover, div.carousel div.skip-links button.skip.active {
+        background-color: #FFF;
+        -moz-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5); }
+  div.carousel div.slides {
+    display: block;
+    z-index: 2;
+    width: auto;
+    white-space: nowrap;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    div.carousel div.slides a {
+      display: inline-block;
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      text-decoration: none;
+      border: none;
+      margin: 0; }
+    div.carousel div.slides img {
+      width: 100%;
+      margin: 0; }

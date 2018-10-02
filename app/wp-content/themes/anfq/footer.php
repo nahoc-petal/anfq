@@ -17,7 +17,12 @@
     <footer class="footer">
       <div class="columns">
         <div class="column is-2">
-          menu
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'menu-1',
+              'menu_id'        => 'primary-menu',
+            ) );
+          ?>
         </div>
         <div class="column is-2">
           <h6 class="subtitle">Adresse</h6>

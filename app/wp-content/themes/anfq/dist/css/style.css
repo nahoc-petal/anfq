@@ -6876,6 +6876,21 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+#navbar #primary-menu {
+  display: -ms-flexbox;
+  display: flex; }
+
+#navbar .menu-primary-navigation-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
+
+#navbar .navbar-item a {
+  color: #363636;
+  font-size: 0.8rem;
+  font-weight: bold; }
+
 .footer {
   padding: 3rem 1.5rem;
   background-color: #f3faf9; }
@@ -6894,3 +6909,14 @@ label.panel-block {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
+
+.is-mission-banner .is-left-part {
+  padding: 8rem 7rem; }
+
+.is-mission-banner .is-right-part {
+  padding: 8rem 7rem;
+  background-color: #c8dd92; }
+
+.is-giving-banner .is-right-part {
+  background-color: #f3faf9;
+  padding: 8rem 7rem; }

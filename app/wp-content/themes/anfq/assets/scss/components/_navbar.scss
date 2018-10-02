@@ -1,0 +1,16 @@
+#navbar {
+  #primary-menu {
+    display: flex;
+  }
+  
+  .menu-primary-navigation-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-item a {
+    color: #363636;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}

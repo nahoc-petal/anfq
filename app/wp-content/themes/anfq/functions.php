@@ -161,3 +161,32 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Resources custom post type
+ */
+function create_resources_post_type() {
+  register_post_type( 'resources',
+    array(
+      'labels' => array(
+        'name' => __( 'Ressources' ),
+        'singular_name' => __( 'Ressource' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+      'taxonomies' => array( 'category' ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_resources_post_type' );
+
+/**
+ * Add classes to menu
+ */
+function atg_menu_classes($classes, $item, $args) {
+  if($args->theme_location == 'menu-1') {
+    $classes[] = 'navbar-item is-uppercase';
+  }
+  return $classes;
+}
+add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
