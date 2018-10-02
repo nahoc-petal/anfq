@@ -13,21 +13,43 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'anfq' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'anfq' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'anfq' ), 'anfq', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+  <div class="container">
+    <footer class="footer">
+      <div class="columns">
+        <div class="column is-2">
+          menu
+        </div>
+        <div class="column is-2">
+          <h6 class="subtitle">Adresse</h6>
+          <p>
+            <small>C.P. 150, Succ. St-Michel,</small><br/>
+            <small>Montréal, Québec,</small><br/>
+            <small>Canada,</small><br/>
+          </p>
+          <br/>
+          <h6 class="subtitle">Téléphone</h6>
+          <p>
+            <small><a href="tel:5143856702">514-385-6702</a></small>
+          </p>
+        </div>
+        <div class="column is-2">
+          <h6 class="subtitle">Courriel</h6>
+          <p>
+            <small><a href="mailto:anfq@anfq.org">anfq@anfq.org</a></small>
+          </p>
+        </div>
+        <div class="column">
+          <h4 class="subtitle">Faire un don</h4>
+          <p>sdfksjdfhgsdkjfhgjkdsfhg</p>
+          <br/>
+          <a href="#" class="button is-primary has-no-border-radius">Faire un don</a>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright has-text-centered">
+      <small>Tous droits réservés 2018 &copy; Association de la Neurofibromatose du Québec</small>
+    </div>
+  </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
