@@ -181,6 +181,26 @@ function create_resources_post_type() {
 add_action( 'init', 'create_resources_post_type' );
 
 /**
+ * FAQ custom post type
+ */
+function create_faq_post_type() {
+  register_post_type( 'faq',
+    array(
+      'labels' => array(
+        'name' => __( 'FAQ' ),
+        'singular_name' => __( 'FAQ' )
+      ),
+      'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+      'taxonomies' => array( 'category' ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_faq_post_type' );
+
+
+/**
  * Add classes to menu
  */
 function atg_menu_classes($classes, $item, $args) {

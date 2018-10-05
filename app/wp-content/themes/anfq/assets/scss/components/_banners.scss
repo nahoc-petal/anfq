@@ -1,5 +1,6 @@
 .is-member-banner {
   background-color: #414647;
+  overflow: hidden;
 
   .is-left-part {
     padding: 8rem 7rem;
@@ -31,7 +32,22 @@
   }
   
   .is-right-part {
-    background-color: #f3faf9;
+    background-color: $lightBlue;
     padding: 8rem 7rem;
+  }
+}
+
+.why-become-member-banner {
+  padding: 4rem;
+  background-color: $lightGreen;
+  .column {
+    margin-top: 3rem;
+  }
+  .separator {
+    height: 2px;
+    width: 50px;
+    background-color: $green;
+    display: block;
+    margin-bottom: 1.5rem;
   }
 }

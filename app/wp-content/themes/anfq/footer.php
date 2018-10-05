@@ -16,7 +16,7 @@
   <div class="container">
     <footer id="contact" class="footer">
       <div class="columns">
-        <div class="column is-2">
+        <div class="column">
           <?php
             wp_nav_menu( array(
               'theme_location' => 'menu-1',
@@ -24,7 +24,7 @@
             ) );
           ?>
         </div>
-        <div class="column is-2">
+        <div class="column">
           <h6 class="subtitle">Adresse</h6>
           <p>
             <small>C.P. 150, Succ. St-Michel,</small><br/>
@@ -37,13 +37,13 @@
             <small><a href="tel:5143856702">514-385-6702</a></small>
           </p>
         </div>
-        <div class="column is-2">
+        <div class="column">
           <h6 class="subtitle">Courriel</h6>
           <p>
             <small><a href="mailto:anfq@anfq.org">anfq@anfq.org</a></small>
           </p>
         </div>
-        <div class="column">
+        <div class="column is-4">
           <h4 class="subtitle">Faire un don</h4>
           <p>sdfksjdfhgsdkjfhgjkdsfhg</p>
           <br/>
