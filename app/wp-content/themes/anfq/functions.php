@@ -190,8 +190,7 @@ function create_faq_post_type() {
         'name' => __( 'FAQ' ),
         'singular_name' => __( 'FAQ' )
       ),
-      'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-      'taxonomies' => array( 'category' ),
+      'supports' => array( 'title', 'editor', 'revisions', 'custom-fields', ),
       'public' => true,
       'has_archive' => true,
     )

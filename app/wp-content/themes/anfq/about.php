@@ -11,7 +11,7 @@ get_header();
 	<div id="about" class="content-area">
 		<main id="main" class="container">
       <section class="section has-text-centered">
-        <?php the_title( '<h1 class="title">', '</h1>' );?>
+        <?php the_title( '<h1 class="page-title">', '</h1>' );?>
       </section>
       <section class="section has-text-centered">
         <h2 class="subtitle has-text-weight-bold"><?php echo get_field('intro_title'); ?></h2>

@@ -1,5 +1,12 @@
+* {
+  font-family: 'Open Sans', sans-serif; }
+
 .has-text-green {
   color: #77BA43 !important; }
+
+.page-title {
+  font-weight: 600;
+  font-size: 3.2rem; }
 
 .has-no-border-radius {
   border-radius: 0 !important; }

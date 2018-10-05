@@ -11,7 +11,7 @@ get_header();
 	<div id="resources">
 		<main id="main" class="container">
       <section class="section">
-        <h1 class="title"><?php echo get_the_title(); ?></h1>
+        <h1 class="page-title has-text-centered"><?php echo get_the_title(); ?></h1>
       </section>
       <section class="section filters">
         <?php
