@@ -14,24 +14,35 @@ get_header();
         <?php the_title( '<h1 class="title">', '</h1>' );?>
       </section>
       <section class="section has-text-centered">
-        <h2 class="subtitle">dslgkaslkdsd</h2>
-        <p>sfjnsajdsjkgdf</p>
+        <h2 class="subtitle has-text-weight-bold"><?php echo get_field('intro_title'); ?></h2>
+        <p><?php echo get_field('intro_description'); ?></p>
       </section>
       <section class="section has-text-centered">
-        <h2 class="title">Nos objectifs</h2>
+        <h2 class="title"><?php echo get_field('objectives_title'); ?></h2>
         <div class="columns is-multiline">
           <div class="column is-one-third"></div>
         </div>
       </section>
       <section class="section">
-        <h2 class="title">Conseil d'administration</h2>
-        <div class="columns">
-          <div class="column"></div>
+        <h2 class="title has-text-centered"><?php echo get_field('administrative_council_title'); ?></h2>
+        <div class="columns is-multiline">
+          <?php 
+            while ( have_rows('administrative_council_members') ) : the_row();
+          ?>
+            <div class="column is-2">
+              <img src="<?php echo get_sub_field('image')['url']; ?>" alt="<?php echo the_sub_field('name'); ?>" />
+              <br/>
+              <strong class='has-text-weight-bold subtitle'><?php echo the_sub_field('name'); ?></strong>
+              <p class="is-italic"><?php echo the_sub_field('title'); ?></p>
+            </div>
+          <?php
+            endwhile;
+          ?>
         </div>
       </section>
       <section class="section">
-        <h2 class="title">Réalisations 2015-2016</h2>
-        <p>video</p>
+        <h2 class="title has-text-centered"><?php echo get_field('work_title'); ?></h2>
+        <p><?php echo get_field('work_video_url'); ?></p>
       </section>
       <section class="section">
         <div class="is-member-banner">

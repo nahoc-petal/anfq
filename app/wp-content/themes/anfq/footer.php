@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
   <div class="container">
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <div class="columns">
         <div class="column is-2">
           <?php

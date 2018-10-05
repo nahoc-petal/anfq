@@ -2,53 +2,54 @@
 /**
  * Template Name: Resources
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package anfq
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+	<div id="resources">
+		<main id="main" class="container">
+      <section class="section">
+        <h1 class="title"><?php echo get_the_title(); ?></h1>
+      </section>
+      <section class="section filters">
+        <?php
+          $categories = get_categories( array(
+              'orderby' => 'name',
+              'order'   => 'ASC'
+          ) );
+          
+          foreach( $categories as $category ) { ?>
+            <a href="?filter=<?php echo $category->slug; ?>" class="button is-outlined has-no-border-radius">
+              <?php echo $category->name; ?>
+            </a>
+          <?php } ?>
+      </section>
+      <section class="section">
+        <div class="columns is-multiline">
+          <?php
+            $args = array( 'post_type' => 'resources');
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+          ?>
+            <div class="column is-one-third">
+              <div class="box has-no-border-radius">
+                <div class="level">
+                  <div class="level-left"><img src="" /><?php foreach((get_the_category()) as $category) { echo $category->cat_name . ' '; } ?></div>
+                  <div class="level-right"><?php the_date(); ?></div>
+                </div>
+                <h2 class="subtitle has-text-weight-bold"><?php the_title(); ?></h2>
+                <hr>
+                <a href="#" class="has-text-primary">Télécharger</a>
+              </div>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      </section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

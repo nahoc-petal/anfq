@@ -8,6 +8,7 @@ Thumbs.db
 .apdisk
 .fseventsd
 node_modules
+data
 
 # Editor files
 *.sublime-*

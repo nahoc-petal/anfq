@@ -6876,6 +6876,9 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+#resources .filters .button {
+  margin-right: 1rem; }
+
 #navbar #primary-menu {
   display: -ms-flexbox;
   display: flex; }
