@@ -27,6 +27,9 @@ a:visited {
 .no-padding-top {
   padding-top: 0 !important; }
 
+.no-shadow {
+  box-shadow: none !important; }
+
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6936,6 +6939,9 @@ label.panel-block {
 #resources .date {
   opacity: 0.6; }
 
+#neurofibromatosis .faq .box {
+  border: 1px solid #ddd; }
+
 #neurofibromatosis .faq .level {
   margin: 0; }
 
@@ -6959,6 +6965,19 @@ label.panel-block {
 
 #neurofibromatosis .faq .content {
   margin-top: 2rem; }
+
+#events .events-to-come .box {
+  height: 100%;
+  padding: 2.5rem; }
+
+#events .events-to-come .day {
+  font-size: 4rem; }
+
+#events .events-to-come .subtitle {
+  margin-bottom: 0.5rem; }
+
+#events .promoted-event .day {
+  font-size: 4rem; }
 
 #navbar #primary-menu {
   display: -ms-flexbox;

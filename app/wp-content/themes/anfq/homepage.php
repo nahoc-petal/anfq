@@ -162,7 +162,7 @@ get_header();
                 <h6><?php echo get_post_meta(get_the_ID())['event-location'][0]; ?></h6>
                 <hr/>
                 <h3 class="subtitle"><?php the_title(); ?></h3>
-                <p><<?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
+                <p><?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
                 <br/>
                 <a class="has-text-primary" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur facebook','anfq'); ?></a>
               </div>

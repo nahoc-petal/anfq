@@ -8,44 +8,97 @@
 get_header();
 ?>
 
-	<div id="about primary" class="content-area">
+	<div id="events" class="content-area">
 		<main id="main" class="container">
-      <section class="section has-text-centered">
-        <?php the_title( '<h1 class="page-title">', '</h1>' );?>
-      </section>
-      <section class="section has-text-centered">
-        <h2 class="subtitle">dslgkaslkdsd</h2>
-        <p>sfjnsajdsjkgdf</p>
-      </section>
-      <section class="section has-text-centered">
-        <h2 class="title">Nos objectifs</h2>
-        <div class="columns is-multiline">
-          <div class="column is-one-third"></div>
-        </div>
-      </section>
       <section class="section">
-        <h2 class="title">Conseil d'administration</h2>
-        <div class="columns">
-          <div class="column"></div>
-        </div>
-      </section>
-      <section class="section">
-        <h2 class="title">Réalisations 2015-2016</h2>
-        <p>video</p>
-      </section>
-      <section class="section">
-        <div class="is-member-banner">
+        <div class="is-become-member-banner">
           <div class="columns">
-            <div class="column is-left-part is-5">
-              <h3 class="title has-text-white">Devenir membre</h3>
-              <p class="has-text-white">Devenir membre est gratuit ! Les membres actifs ont droit de vote à l'assemblée générale et sont invités à assister aux rencontres et conférences.</p>
-              <br/>
-              <a href="#" class="button is-primary is-inverted is-outlined has-no-border-radius">Devenir membre</a>
+            <?php
+              $args = array( 
+                'post_type' => 'event',
+                'order'    => 'ASC',
+                'orderby'  => 'event-start-date',
+                'meta_key' => 'event-start-date',
+              );
+              $loop = new WP_Query( $args );
+              $count = 0;
+              while ( $loop->have_posts() ) : $loop->the_post();
+                if($count === 0 && time() < get_post_meta(get_the_ID())['event-start-date'][0]):
+            ?>
+            <div class="column is-left-part" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
             </div>
-            <div class="column is-background-image"></div>
+            <div class="column is-right-part is-5 promoted-event">
+              <h2 class="subtitle"><?php _e('Prochain événement', 'anfq'); ?></h2>
+              <div class="level">
+                <div class="level-left">
+                  <span class="has-text-lightgreen day">
+                    <?php echo gmdate("d", get_post_meta(get_the_ID())['event-start-date'][0]); ?>
+                  </span>
+                  <div class="column">
+                    <h4 class="subtitle"><?php echo gmdate("F", get_post_meta(get_the_ID())['event-start-date'][0]); ?></h4>
+                    <h5><?php echo get_post_meta(get_the_ID())['event-time'][0]; ?></h5>
+                  </div>
+                </div>
+              </div>
+              <hr/>
+              <h6><?php echo get_post_meta(get_the_ID())['event-location'][0]; ?></h6>
+              <hr/>
+              <h3 class="subtitle"><?php the_title(); ?></h3>
+              <p><?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
+              <br/>
+              <a class="is-primary button has-no-border-radius is-outlined" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur facebook','anfq'); ?></a>
+            </div>
+            <?php $count++; endif; endwhile; ?>
           </div>
         </div>
       </section>
+      <section class="section no-padding-bottom">
+        <?php the_title( '<h1 class="page-title">', '</h1>' );?>
+      </section>
+      <section class="section events-to-come no-padding-top">
+        <br/>
+          <h2 class="title"><?php echo get_field('events_to_come'); ?></h2>
+          <div class="columns">
+            <?php
+              $args = array( 
+                'post_type' => 'event',
+                'order'    => 'ASC',
+                'orderby'  => 'event-start-date',
+                'meta_key' => 'event-start-date'
+              );
+              $loop = new WP_Query( $args );
+              $count = 0;
+              while ( $loop->have_posts() ) : $loop->the_post();
+                if($count !== 0 && time() < get_post_meta(get_the_ID())['event-start-date'][0]):
+            ?>
+            <div class="column">
+              <div class="box has-no-border-radius">
+                <div class="level">
+                  <div class="level-left">
+                    <span class="has-text-lightgreen day">
+                    <?php echo gmdate("d", get_post_meta(get_the_ID())['event-start-date'][0]); ?>
+                    </span>
+                    <div class="column">
+                      <h4 class="subtitle"><?php echo gmdate("F", get_post_meta(get_the_ID())['event-start-date'][0]); ?></h4>
+                      <h5><?php echo get_post_meta(get_the_ID())['event-time'][0]; ?></h5>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <h6><?php echo get_post_meta(get_the_ID())['event-location'][0]; ?></h6>
+                <hr/>
+                <h3 class="subtitle"><?php the_title(); ?></h3>
+                <p><?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
+                <br/>
+                <a class="has-text-primary" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur facebook','anfq'); ?></a>
+              </div>
+            </div>
+            <?php endif; $count++; endwhile; ?>
+          </div>
+          <br/>
+          <br/>
+        </section>
+      
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

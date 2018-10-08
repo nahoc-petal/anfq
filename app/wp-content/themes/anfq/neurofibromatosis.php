@@ -19,7 +19,7 @@ get_header();
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post();
           ?>
-            <div class="box has-no-border-radius">
+            <div class="box has-no-border-radius no-shadow">
               <div class="level">
                 <div class="level-left">
                   <h2 class="subtitle"><?php the_title(); ?></h2>
@@ -32,6 +32,7 @@ get_header();
             </div>
           <?php endwhile; ?>
       </section>
+      <br/><br/><br/><br/>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
