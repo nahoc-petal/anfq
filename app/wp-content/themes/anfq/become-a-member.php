@@ -12,7 +12,7 @@ get_header();
 		<main id="main" class="site-main">
       <div class="container">
         <br/>
-        <section>
+        <section class="section no-padding-bottom">
           <div class="is-member-banner">
             <div class="columns">
               <div class="column is-left-part is-5">
@@ -23,7 +23,7 @@ get_header();
             </div>
           </div>
         </section>
-        <section>
+        <section class="section no-padding-top">
           <div class="why-become-member-banner">
             <h2 class="title has-text-centered"><?php _e('Pourquoi devenir membre de l\'ANFQ?', 'anfq'); ?></h2>
             <div class="columns is-multiline">
@@ -69,6 +69,14 @@ get_header();
               </div>
             </div>
           </div>
+        </section>
+        <section class="section has-text-centered">
+          <h2 class="title has-text-centered"><?php _e('Devenir membre est gratuit !', 'anfq'); ?></h2>
+          <p style="max-width: 800px; margin: auto;"><?php _e('Néanmoins, un don volontaire déductible d\impôt de 25.00$ ou plus par année est suggéré mais non obligatoire pour rester membre. Les membres actifs ont droit de vote à l\'assemblée générale et sont invités à assister aux rencontres et conférences.', 'anfq');?></p>
+          <br/>
+          <a href="#" class="button is-primary has-no-border-radius"><?php _e('Devenir membre', 'anfq'); ?></a>
+          <br/><br/>
+          <br/>
         </section>
       </div>
 		</main><!-- #main -->
