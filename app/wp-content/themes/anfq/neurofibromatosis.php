@@ -25,10 +25,10 @@ get_header();
                   <h2 class="subtitle"><?php the_title(); ?></h2>
                 </div>
                 <div class="level-right">
-                  <a href="#" class='more button is-dark has-no-border-radius is-large'>+</a>
+                  <a href="#" class='more button is-dark has-no-border-radius is-large'></a>
                 </div>
               </div>
-              <p><?php the_content(); ?></p>
+              <div class="content"><?php the_content(); ?></div>
             </div>
           <?php endwhile; ?>
       </section>

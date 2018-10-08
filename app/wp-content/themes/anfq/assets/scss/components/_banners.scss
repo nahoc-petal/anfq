@@ -7,7 +7,7 @@
   }
   
   .is-background-image {
-    background-image: url('../images/random-questions-to-ask-a-girl-main-in-post.jpg');
+    background-image: url('../images/girl-laughing.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,6 +15,9 @@
 }
 
 .is-mission-banner {
+  position: relative;
+  top: -2px;
+  overflow: hidden;
   .is-left-part {
     padding: 8rem 7rem;
   }
@@ -25,16 +28,24 @@
   }
 }
 
+.is-become-member-banner,
 .is-giving-banner {
+  overflow: hidden;
 
-  .is-left-part {
-    
+  .button-prev,
+  .button-next {
+    outline: 0;
   }
   
   .is-right-part {
     background-color: $lightBlue;
     padding: 8rem 7rem;
   }
+}
+
+.is-become-member-banner {
+  position: relative;
+  top: -2px;
 }
 
 .why-become-member-banner {

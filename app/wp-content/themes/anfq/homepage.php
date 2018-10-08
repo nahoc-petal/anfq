@@ -12,11 +12,11 @@
 get_header();
 ?>
 
-	<div id="primary homepage" class="content-area">
+	<div id="homepage" class="content-area">
 		<main id="main" class="site-main">
       <div class="container">
 
-        <section class="section">
+        <section class="section no-padding-bottom">
           <div class="is-giving-banner">
             <div class="columns">
               <div class="column is-paddingless is-left-part">
@@ -35,7 +35,7 @@ get_header();
           </div>
         </section>
 
-        <section class="section">
+        <section class="section no-padding-top no-padding-bottom">
           <div class="is-mission-banner">
             <div class="columns">
               <div class="column is-left-part is-5">
@@ -117,8 +117,8 @@ get_header();
           </div>
         </section>
 
-        <section class="section">
-          <div class="is-giving-banner">
+        <section class="section no-padding-top">
+          <div class="is-become-member-banner">
             <div class="columns">
               <div class="column is-left-part">
               </div>
@@ -132,49 +132,51 @@ get_header();
           </div>
         </section>
 
-        <section class="section">
-          <h2 class="title">Événements à venir</h2>
+        <section class="section events-to-come">
+        <br/>
+          <h2 class="title"><?php echo get_field('events_to_come'); ?></h2>
+          <br/>
           <div class="columns">
+            <?php
+              $args = array( 
+                'post_type' => 'event',
+                //'category_name'  => $selectedCategory,
+              );
+              $loop = new WP_Query( $args );
+              while ( $loop->have_posts() ) : $loop->the_post();
+            ?>
             <div class="column">
               <div class="box has-no-border-radius">
+                <div class="level">
+                  <div class="level-left">
+                    <span class="has-text-lightgreen day">
+                      <?php echo gmdate("d", get_post_meta(get_the_ID())['event-start-date'][0]); ?>
+                    </span>
+                    <div class="column">
+                      <h4 class="subtitle"><?php echo gmdate("F", get_post_meta(get_the_ID())['event-start-date'][0]); ?></h4>
+                      <h5><?php echo get_post_meta(get_the_ID())['event-time'][0]; ?></h5>
+                    </div>
+                  </div>
+                </div>
                 <hr/>
-                <h6>555 avenue du chemin</h6>
+                <h6><?php echo get_post_meta(get_the_ID())['event-location'][0]; ?></h6>
                 <hr/>
-                <h3 class="subtitle">Nom de l'événement</h3>
-                <p>Breve description</p>
+                <h3 class="subtitle"><?php the_title(); ?></h3>
+                <p><<?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
                 <br/>
-                <a class="has-text-primary" href="#">M'inscrire sur facebook</a>
+                <a class="has-text-primary" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur facebook','anfq'); ?></a>
               </div>
             </div>
-            <div class="column">
-              <div class="box has-no-border-radius">
-                <hr/>
-                <h6>555 avenue du chemin</h6>
-                <hr/>
-                <h3 class="subtitle">Nom de l'événement</h3>
-                <p>Breve description</p>
-                <br/>
-                <a class="has-text-primary" href="#">M'inscrire sur facebook</a>
-              </div>
-            </div>
-            <div class="column">
-              <div class="box has-no-border-radius">
-                <hr/>
-                <h6>555 avenue du chemin</h6>
-                <hr/>
-                <h3 class="subtitle">Nom de l'événement</h3>
-                <p>Breve description</p>
-                <br/>
-                <a class="has-text-primary" href="#">M'inscrire sur facebook</a>
-              </div>
-            </div>
+            <?php endwhile; ?>
           </div>
+          <br/>
           <div class="has-text-centered">
-            <a href="#" class="button is-primary is-outlined has-no-border-radius">Voir tous les événements</a>
+            <a href="<?php _e('/evenements', 'anfq'); ?>" class="button is-primary is-outlined has-no-border-radius">Voir tous les événements</a>
           </div>
+          <br/>
         </section>
 
-        <section class="section">
+        <section class="section no-padding-bottom">
           <div class="is-member-banner">
             <div class="columns">
               <div class="column is-left-part is-5">

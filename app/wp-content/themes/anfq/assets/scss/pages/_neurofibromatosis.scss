@@ -1,7 +1,33 @@
 #neurofibromatosis {
   .faq {
+    .level {
+      margin: 0;
+    }
+    .level-right {
+      position: relative;
+    }
     .more {
-      
+      position: absolute;
+      top: -34px;
+      height: 67px;
+      right: -20px;
+      font-size: 1.75rem;
+      &:after {
+        content: '✕';
+        transform: rotate(45deg);
+      }
+      &:focus {
+        box-shadow: none!important;
+      }
+      &.active {
+        &:after {
+          content: '✕';
+          transform: rotate(0deg);
+        }
+      }
+    }
+    .content {
+      margin-top: 2rem;
     }
   }
 }

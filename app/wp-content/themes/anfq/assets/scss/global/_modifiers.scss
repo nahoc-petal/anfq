@@ -5,3 +5,17 @@
 .button {
   padding: 1.5rem 2rem!important;
 }
+
+a {
+  &:visited {
+    color: #363636;
+  }
+}
+
+.no-padding-bottom {
+  padding-bottom: 0!important;
+}
+
+.no-padding-top {
+  padding-top: 0!important;
+}

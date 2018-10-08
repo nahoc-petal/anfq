@@ -123,14 +123,8 @@ function anfq_scripts() {
   wp_enqueue_style( 'anfq-style', get_stylesheet_uri() );
   
   wp_enqueue_style( 'anfq-custom-style', get_template_directory_uri() . '/dist/css/style.css' );
-
-	wp_enqueue_script( 'anfq-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'anfq-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+  
+  wp_enqueue_script( 'anfq-scripts', get_template_directory_uri() . '/dist/js/script.js', array('jquery'), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', 'anfq_scripts' );
 
@@ -171,7 +165,7 @@ function create_resources_post_type() {
         'name' => __( 'Ressources' ),
         'singular_name' => __( 'Ressource' )
       ),
-      'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+      'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
       'taxonomies' => array( 'category' ),
       'public' => true,
       'has_archive' => true,

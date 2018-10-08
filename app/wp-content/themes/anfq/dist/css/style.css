@@ -1,8 +1,12 @@
+@charset "UTF-8";
 * {
   font-family: 'Open Sans', sans-serif; }
 
 .has-text-green {
   color: #77BA43 !important; }
+
+.has-text-lightgreen {
+  color: #C8DE8E !important; }
 
 .page-title {
   font-weight: 600;
@@ -13,6 +17,15 @@
 
 .button {
   padding: 1.5rem 2rem !important; }
+
+a:visited {
+  color: #363636; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.no-padding-top {
+  padding-top: 0 !important; }
 
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
@@ -6893,8 +6906,59 @@ label.panel-block {
 #about .administrative-council {
   background-color: #f3faf9; }
 
+#homepage .events-to-come .box {
+  height: 100%;
+  padding: 2.5rem; }
+
+#homepage .events-to-come .day {
+  font-size: 4rem; }
+
+#homepage .events-to-come .subtitle {
+  margin-bottom: 0.5rem; }
+
 #resources .filters .button {
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  margin-bottom: 1.2rem; }
+
+#resources .icon-bg {
+  background-color: #C8DE8E;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem; }
+
+#resources .date {
+  opacity: 0.6; }
+
+#neurofibromatosis .faq .level {
+  margin: 0; }
+
+#neurofibromatosis .faq .level-right {
+  position: relative; }
+
+#neurofibromatosis .faq .more {
+  position: absolute;
+  top: -34px;
+  height: 67px;
+  right: -20px;
+  font-size: 1.75rem; }
+  #neurofibromatosis .faq .more:after {
+    content: '✕';
+    transform: rotate(45deg); }
+  #neurofibromatosis .faq .more:focus {
+    box-shadow: none !important; }
+  #neurofibromatosis .faq .more.active:after {
+    content: '✕';
+    transform: rotate(0deg); }
+
+#neurofibromatosis .faq .content {
+  margin-top: 2rem; }
 
 #navbar #primary-menu {
   display: -ms-flexbox;
@@ -6914,6 +6978,8 @@ label.panel-block {
 .footer {
   padding: 3rem 1.5rem;
   background-color: #f3faf9; }
+  .footer .menu-item a {
+    color: #363636; }
 
 .copyright {
   padding-top: 3rem;
@@ -6926,21 +6992,37 @@ label.panel-block {
   .is-member-banner .is-left-part {
     padding: 8rem 7rem; }
   .is-member-banner .is-background-image {
-    background-image: url("../images/random-questions-to-ask-a-girl-main-in-post.jpg");
+    background-image: url("../images/girl-laughing.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
 
-.is-mission-banner .is-left-part {
-  padding: 8rem 7rem; }
+.is-mission-banner {
+  position: relative;
+  top: -2px;
+  overflow: hidden; }
+  .is-mission-banner .is-left-part {
+    padding: 8rem 7rem; }
+  .is-mission-banner .is-right-part {
+    padding: 8rem 7rem;
+    background-color: #c8dd92; }
 
-.is-mission-banner .is-right-part {
-  padding: 8rem 7rem;
-  background-color: #c8dd92; }
+.is-become-member-banner,
+.is-giving-banner {
+  overflow: hidden; }
+  .is-become-member-banner .button-prev,
+  .is-become-member-banner .button-next,
+  .is-giving-banner .button-prev,
+  .is-giving-banner .button-next {
+    outline: 0; }
+  .is-become-member-banner .is-right-part,
+  .is-giving-banner .is-right-part {
+    background-color: #f3faf9;
+    padding: 8rem 7rem; }
 
-.is-giving-banner .is-right-part {
-  background-color: #f3faf9;
-  padding: 8rem 7rem; }
+.is-become-member-banner {
+  position: relative;
+  top: -2px; }
 
 .why-become-member-banner {
   padding: 4rem;

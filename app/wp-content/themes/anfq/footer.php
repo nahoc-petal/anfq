@@ -14,6 +14,7 @@
 	</div><!-- #content -->
 
   <div class="container">
+    <div class="section no-padding-bottom no-padding-top">
     <footer id="contact" class="footer">
       <div class="columns">
         <div class="column">
@@ -53,6 +54,7 @@
     </footer>
     <div class="copyright has-text-centered">
       <small>Tous droits réservés 2018 &copy; Association de la Neurofibromatose du Québec</small>
+    </div>
     </div>
   </div>
 </div><!-- #page -->

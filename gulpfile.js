@@ -94,7 +94,7 @@ gulp.task('optimize-styles', function () {
 gulp.task('compile-scripts', function () {
   return (
     gulp.src([
-      assetPath + '/js/script.js'
+      assetPath + '/js/**/*.js'
     ])
     .pipe(concat('script.js'))
     .pipe(gulp.dest(distPath + '/js'))

@@ -1,1 +1,14 @@
-#homepage {}
+#homepage {
+  .events-to-come {
+    .box {
+      height: 100%;
+      padding: 2.5rem;
+    }
+    .day {
+      font-size: 4rem;
+    }
+    .subtitle {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
