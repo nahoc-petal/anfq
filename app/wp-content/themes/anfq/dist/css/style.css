@@ -30,6 +30,11 @@ a:visited {
 .no-shadow {
   box-shadow: none !important; }
 
+@media screen and (min-width: 1644px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important; } }
+
 /*! bulma.io v0.7.1 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6976,8 +6981,11 @@ label.panel-block {
 #events .events-to-come .subtitle {
   margin-bottom: 0.5rem; }
 
-#events .promoted-event .day {
-  font-size: 4rem; }
+#events .promoted-event {
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+  #events .promoted-event .day {
+    font-size: 4rem; }
 
 #navbar #primary-menu {
   display: -ms-flexbox;
@@ -6994,6 +7002,23 @@ label.panel-block {
   font-size: 0.8rem;
   font-weight: bold; }
 
+#navbar .section {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex; }
+
+#navbar .navbar-brand > .navbar-item {
+  padding-left: 0; }
+
+#navbar .navbar-end > .navbar-item:last-child {
+  padding-right: 0; }
+
+@media screen and (min-width: 1088px) {
+  .navbar > .container .navbar-menu, .container > .navbar .navbar-menu {
+    margin-right: 0rem; }
+  .navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
+    margin-left: 0rem; } }
+
 .footer {
   padding: 3rem 1.5rem;
   background-color: #f3faf9; }
@@ -7006,42 +7031,76 @@ label.panel-block {
   background-color: #fff; }
 
 .is-member-banner {
-  background-color: #414647;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #414647; }
   .is-member-banner .is-left-part {
     padding: 8rem 7rem; }
   .is-member-banner .is-background-image {
     background-image: url("../images/girl-laughing.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    min-height: 320px; }
 
 .is-mission-banner {
-  position: relative;
-  top: -2px;
   overflow: hidden; }
   .is-mission-banner .is-left-part {
     padding: 8rem 7rem; }
   .is-mission-banner .is-right-part {
     padding: 8rem 7rem;
     background-color: #c8dd92; }
+    .is-mission-banner .is-right-part .title {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center; }
 
+.is-promo-event-banner,
 .is-become-member-banner,
 .is-giving-banner {
   overflow: hidden; }
+  .is-promo-event-banner .button-prev,
+  .is-promo-event-banner .button-next,
   .is-become-member-banner .button-prev,
   .is-become-member-banner .button-next,
   .is-giving-banner .button-prev,
   .is-giving-banner .button-next {
     outline: 0; }
+  .is-promo-event-banner .is-right-part,
   .is-become-member-banner .is-right-part,
   .is-giving-banner .is-right-part {
     background-color: #f3faf9;
     padding: 8rem 7rem; }
+  .is-promo-event-banner .is-background-image,
+  .is-become-member-banner .is-background-image,
+  .is-giving-banner .is-background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px; }
 
 .is-become-member-banner {
-  position: relative;
-  top: -2px; }
+  position: relative; }
+  .is-become-member-banner .is-right-part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0rem 7rem; }
+  .is-become-member-banner .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0; }
+  .is-become-member-banner .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 .why-become-member-banner {
   padding: 4rem;
@@ -7054,3 +7113,12 @@ label.panel-block {
     background-color: #77BA43;
     display: block;
     margin-bottom: 1.5rem; }
+
+@media screen and (max-width: 1471px) {
+  .is-mission-banner .is-left-part,
+  .is-member-banner .is-left-part {
+    padding: 5rem 4rem; }
+  .is-mission-banner .is-right-part,
+  .is-become-member-banner .is-right-part,
+  .is-giving-banner .is-right-part {
+    padding: 5rem 4rem; } }

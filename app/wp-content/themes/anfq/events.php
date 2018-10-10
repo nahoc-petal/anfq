@@ -11,8 +11,8 @@ get_header();
 	<div id="events" class="content-area">
 		<main id="main" class="container">
       <section class="section">
-        <div class="is-become-member-banner">
-          <div class="columns">
+        <div class="is-promo-event-banner">
+          <div class="columns is-multiline">
             <?php
               $args = array( 
                 'post_type' => 'event',
@@ -25,9 +25,9 @@ get_header();
               while ( $loop->have_posts() ) : $loop->the_post();
                 if($count === 0 && time() < get_post_meta(get_the_ID())['event-start-date'][0]):
             ?>
-            <div class="column is-left-part" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
+            <div class="column is-background-image is-left-part is-12-tablet is-12-desktop is-7-widescreen" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
             </div>
-            <div class="column is-right-part is-5 promoted-event">
+            <div class="column is-right-part is-12-tablet is-12-desktop is-5-widescreen promoted-event">
               <h2 class="subtitle"><?php _e('Prochain événement', 'anfq'); ?></h2>
               <div class="level">
                 <div class="level-left">

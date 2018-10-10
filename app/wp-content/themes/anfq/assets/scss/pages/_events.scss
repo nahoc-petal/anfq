@@ -11,7 +11,11 @@
       margin-bottom: 0.5rem;
     }
   }
-  .promoted-event .day {
-    font-size: 4rem;
+  .promoted-event {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    .day {
+      font-size: 4rem;
+    }
   }
 }

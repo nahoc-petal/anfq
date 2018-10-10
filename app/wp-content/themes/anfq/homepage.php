@@ -3,9 +3,7 @@
  * Template Name: Homepage
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
+ * 
  * @package anfq
  */
 
@@ -15,21 +13,20 @@ get_header();
 	<div id="homepage" class="content-area">
 		<main id="main" class="site-main">
       <div class="container">
-
         <section class="section no-padding-bottom">
           <div class="is-giving-banner">
-            <div class="columns">
-              <div class="column is-paddingless is-left-part">
+            <div class="columns is-multiline">
+              <div class="column is-paddingless is-left-part is-12-tablet is-12-desktop is-7-widescreen">
               <?php
                 the_post();
                 get_template_part( 'template-parts/content-only', get_post_type() );
               ?>
               </div>
-              <div class="column is-right-part is-5">
-                <h2 class="title">La neurofibromatose</h2>
+              <div class="column is-right-part is-12-tablet is-12-desktop is-5-widescreen">
+                <h2 class="title"><?php _e('La neurofibromatose', 'anfq'); ?></h2>
                 <p>La neurofibromatose est un désordre d'origine génétique. C'est un affection de la peau et des systèmes nerveux et osseux qui est à 50% héréditaire, ce qui veut dire que le gène défectueux de la NF a été transmis à l'enfant par l'un ou l'autre de ses parents. Dans l'autre moitié des cas, elle est le résultat d'une mutation génétique spontanée.</p>
                 <br/>
-                <a class="button is-primary is-outlined has-no-border-radius" href="#">En savoir plus</a>
+                <a class="button is-primary is-outlined has-no-border-radius" href="<?php _e('/la-neurofibromatose/', 'anfq'); ?>"><?php _e('En savoir plus', 'anfq'); ?></a>
               </div>
             </div>
           </div>
@@ -37,12 +34,12 @@ get_header();
 
         <section class="section no-padding-top no-padding-bottom">
           <div class="is-mission-banner">
-            <div class="columns">
-              <div class="column is-left-part is-5">
-                <h3 class="title">Notre mission</h3>
+            <div class="columns is-multiline">
+              <div class="column is-left-part is-12-tablet is-12-desktop is-5-widescreen">
+                <h3 class="title"><?php _e('Notre mission', 'anfq'); ?></h3>
                 <p>Nous sommes heureux de vous accueillir pour partager avec vous notre vie associative dont la mission se veut pour la cause de la neurofibromatose.</p>
               </div>
-              <div class="column is-right-part">
+              <div class="column is-right-part is-12-tablet is-12-desktop is-7-widescreen">
                 <h2 class="title">
                   <svg width="55px" height="50px" viewBox="0 0 55 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -55,8 +52,10 @@ get_header();
                           </g>
                       </g>
                   </svg>
-                  Quelques statistiques
+                  &nbsp;&nbsp;
+                  <?php _e('Quelques statistiques', 'anfq'); ?>
                 </h2>
+                <br/>
                 <div class="columns">
                   <div class="column is-one-third">
                     <h4 class="title">
@@ -69,6 +68,7 @@ get_header();
                               </g>
                           </g>
                       </svg>
+                      &nbsp;
                       28&nbsp;%
                     </h4>
                     <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
@@ -91,7 +91,7 @@ get_header();
                               </g>
                           </g>
                       </svg>
-                      1000
+                      &nbsp;1000
                     </h4>
                     <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
                   </div>
@@ -107,7 +107,7 @@ get_header();
                               </g>
                           </g>
                       </svg>
-                      245
+                      &nbsp;245
                     </h4>
                     <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
                   </div>
@@ -120,13 +120,16 @@ get_header();
         <section class="section no-padding-top">
           <div class="is-become-member-banner">
             <div class="columns">
-              <div class="column is-left-part">
+              <div class="column is-left-part is-paddingless">
+                <div class="videoWrapper">
+                  <iframe width="100%" height="400" src="https://www.youtube.com/embed/zuph3NdNYiQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
               </div>
               <div class="column is-right-part is-5">
-                <h2 class="title">Faire un don</h2>
+                <h2 class="title"><?php _e('Faire un don' ,'anfq'); ?></h2>
                 <p>sdakjfhas dfsajdkfh asdf</p>
                 <br/>
-                <a class="button is-primary has-no-border-radius" href="#">Faire un don</a>
+                <a class="button is-primary has-no-border-radius" href="<?php _e('/devenir-membre/#faire-un-don', 'anfq'); ?>"><?php _e('Faire un don' ,'anfq'); ?></a>
               </div>
             </div>
           </div>
@@ -140,7 +143,7 @@ get_header();
             <?php
               $args = array( 
                 'post_type' => 'event',
-                //'category_name'  => $selectedCategory,
+                'posts_per_page' => '3',
               );
               $loop = new WP_Query( $args );
               while ( $loop->have_posts() ) : $loop->the_post();
@@ -180,10 +183,10 @@ get_header();
           <div class="is-member-banner">
             <div class="columns">
               <div class="column is-left-part is-5">
-                <h3 class="title has-text-white">Devenir membre</h3>
+                <h3 class="title has-text-white"><?php _e('Devenir membre', 'anfq'); ?></h3>
                 <p class="has-text-white">Devenir membre est gratuit ! Les membres actifs ont droit de vote à l'assemblée générale et sont invités à assister aux rencontres et conférences.</p>
                 <br/>
-                <a href="#" class="button is-primary is-inverted is-outlined has-no-border-radius">Devenir membre</a>
+                <a href="<?php _e('/devenir-membre/', 'anfq'); ?>" class="button is-primary is-inverted is-outlined has-no-border-radius"><?php _e('Devenir membre', 'anfq'); ?></a>
               </div>
               <div class="column is-background-image"></div>
             </div>

@@ -1,6 +1,6 @@
 .is-member-banner {
-  background-color: #414647;
   overflow: hidden;
+  background-color: #414647;
 
   .is-left-part {
     padding: 8rem 7rem;
@@ -11,13 +11,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 320px;
   }
 }
 
 .is-mission-banner {
-  position: relative;
-  top: -2px;
   overflow: hidden;
+
   .is-left-part {
     padding: 8rem 7rem;
   }
@@ -25,9 +25,14 @@
   .is-right-part {
     padding: 8rem 7rem;
     background-color: #c8dd92;
+    .title {
+      display: flex;
+      align-items: center;
+    }
   }
 }
 
+.is-promo-event-banner,
 .is-become-member-banner,
 .is-giving-banner {
   overflow: hidden;
@@ -41,11 +46,36 @@
     background-color: $lightBlue;
     padding: 8rem 7rem;
   }
+
+  .is-background-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 320px;
+  }
 }
 
 .is-become-member-banner {
   position: relative;
-  top: -2px;
+  .is-right-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0rem 7rem;
+  }
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+  }
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .why-become-member-banner {
@@ -60,5 +90,22 @@
     background-color: $green;
     display: block;
     margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1471px) {
+  .is-mission-banner,
+  .is-member-banner {
+    .is-left-part {
+      padding: 5rem 4rem;
+    }
+  }
+  .is-mission-banner,
+  .is-become-member-banner,
+  .is-giving-banner {
+    
+    .is-right-part {
+      padding: 5rem 4rem;
+    }
   }
 }

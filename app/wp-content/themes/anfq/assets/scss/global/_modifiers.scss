@@ -23,3 +23,10 @@ a {
 .no-shadow {
   box-shadow: none!important;
 }
+
+@media screen and (min-width: 1644px) {
+  .container {
+    width: 100%!important;
+    max-width: 100%!important;
+  }
+}

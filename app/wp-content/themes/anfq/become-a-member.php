@@ -70,11 +70,11 @@ get_header();
             </div>
           </div>
         </section>
-        <section class="section has-text-centered">
+        <section id="faire-un-don" class="section has-text-centered">
           <h2 class="title has-text-centered"><?php _e('Devenir membre est gratuit !', 'anfq'); ?></h2>
-          <p style="max-width: 800px; margin: auto;"><?php _e('Néanmoins, un don volontaire déductible d\impôt de 25.00$ ou plus par année est suggéré mais non obligatoire pour rester membre. Les membres actifs ont droit de vote à l\'assemblée générale et sont invités à assister aux rencontres et conférences.', 'anfq');?></p>
+          <p style="max-width: 800px; margin: auto;"><?php _e('Néanmoins, un don volontaire déductible d\'impôt de 25.00$ ou plus par année est suggéré mais non obligatoire pour rester membre. Les membres actifs ont droit de vote à l\'assemblée générale et sont invités à assister aux rencontres et conférences.', 'anfq');?></p>
           <br/>
-          <a href="#" class="button is-primary has-no-border-radius"><?php _e('Devenir membre', 'anfq'); ?></a>
+          <a href="<?php _e('/devenir-membre/', 'anfq'); ?>" class="button is-primary has-no-border-radius"><?php _e('Devenir membre', 'anfq'); ?></a>
           <br/><br/>
           <br/>
         </section>

@@ -48,7 +48,7 @@
           <h4 class="subtitle">Faire un don</h4>
           <p>sdfksjdfhgsdkjfhgjkdsfhg</p>
           <br/>
-          <a href="#" class="button is-primary has-no-border-radius">Faire un don</a>
+          <a href="<?php _e('/devenir-membre/#faire-un-don', 'anfq'); ?>" class="button is-primary has-no-border-radius">Faire un don</a>
         </div>
       </div>
     </footer>
