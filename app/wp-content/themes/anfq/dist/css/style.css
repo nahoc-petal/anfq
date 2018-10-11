@@ -12,6 +12,10 @@
   font-weight: 600;
   font-size: 3.2rem; }
 
+@media screen and (max-width: 1087px) {
+  .page-title {
+    font-size: 2.4rem; } }
+
 .has-no-border-radius {
   border-radius: 0 !important; }
 
@@ -6944,19 +6948,20 @@ label.panel-block {
 #resources .date {
   opacity: 0.6; }
 
+#neurofibromatosis .faq .subtitle {
+  padding-right: 90px; }
+
 #neurofibromatosis .faq .box {
   border: 1px solid #ddd; }
 
 #neurofibromatosis .faq .level {
+  position: relative;
   margin: 0; }
-
-#neurofibromatosis .faq .level-right {
-  position: relative; }
 
 #neurofibromatosis .faq .more {
   position: absolute;
-  top: -34px;
-  height: 67px;
+  top: -20px;
+  height: 65px;
   right: -20px;
   font-size: 1.75rem; }
   #neurofibromatosis .faq .more:after {
@@ -7013,11 +7018,26 @@ label.panel-block {
 #navbar .navbar-end > .navbar-item:last-child {
   padding-right: 0; }
 
+#navbar .burger {
+  position: absolute;
+  right: 0; }
+
 @media screen and (min-width: 1088px) {
   .navbar > .container .navbar-menu, .container > .navbar .navbar-menu {
     margin-right: 0rem; }
   .navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
     margin-left: 0rem; } }
+
+@media screen and (max-width: 1087px) {
+  #navbar-primary {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 7rem;
+    padding-left: 0.75rem; }
+  #primary-menu {
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 .footer {
   padding: 3rem 1.5rem;

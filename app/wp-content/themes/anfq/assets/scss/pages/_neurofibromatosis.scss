@@ -1,18 +1,19 @@
 #neurofibromatosis {
   .faq {
+    .subtitle {
+      padding-right: 90px;
+    }
     .box {
       border: 1px solid #ddd;
     }
     .level {
-      margin: 0;
-    }
-    .level-right {
       position: relative;
+      margin: 0;
     }
     .more {
       position: absolute;
-      top: -34px;
-      height: 67px;
+      top: -20px;
+      height: 65px;
       right: -20px;
       font-size: 1.75rem;
       &:after {

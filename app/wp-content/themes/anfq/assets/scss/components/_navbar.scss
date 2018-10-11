@@ -28,6 +28,10 @@
       padding-right: 0;
     }
   }
+  .burger {
+    position: absolute;
+    right: 0;
+  }
 }
 
 @media screen and (min-width: 1088px) {
@@ -36,5 +40,19 @@
   }
   .navbar > .container .navbar-brand, .container > .navbar .navbar-brand {
     margin-left: 0rem;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  #navbar-primary {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 7rem;
+    padding-left: 0.75rem;
+  }
+
+  #primary-menu {
+    flex-direction: column;
   }
 }
