@@ -61,7 +61,7 @@ get_header();
                 </div>
                 <h2 class="subtitle has-text-weight-bold"><?php the_title(); ?></h2>
                 <hr>
-                <a href="<?php echo get_the_permalink(); ?>" class="has-text-primary">Télécharger</a>
+                <a href="<?php echo get_the_permalink(); ?>" class="has-text-primary"><?php echo get_post_meta(get_the_ID())['link_label'][0] ?></a>
               </div>
             </div>
           <?php endwhile; ?>

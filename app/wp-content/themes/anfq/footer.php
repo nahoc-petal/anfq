@@ -39,10 +39,13 @@
           </p>
         </div>
         <div class="column">
-          <h6 class="subtitle">Courriel</h6>
+          <h6 class="subtitle"><?php _e('Courriel','anfq'); ?></h6>
           <p>
             <small><a href="mailto:anfq@anfq.org">anfq@anfq.org</a></small>
           </p>
+          <a href="#" class="facebook">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/facebook.svg" alt="Facebook" />
+          </a>
         </div>
         <div class="column is-4">
           <h4 class="subtitle">Faire un don</h4>

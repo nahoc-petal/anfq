@@ -24,7 +24,7 @@ get_header();
               </div>
               <div class="column is-right-part is-12-tablet is-12-desktop is-5-widescreen">
                 <h2 class="title"><?php _e('La neurofibromatose', 'anfq'); ?></h2>
-                <p>La neurofibromatose est un désordre d'origine génétique. C'est un affection de la peau et des systèmes nerveux et osseux qui est à 50% héréditaire, ce qui veut dire que le gène défectueux de la NF a été transmis à l'enfant par l'un ou l'autre de ses parents. Dans l'autre moitié des cas, elle est le résultat d'une mutation génétique spontanée.</p>
+                <p><?php echo get_field('neurofibromatose_description'); ?></p>
                 <br/>
                 <a class="button is-primary is-outlined has-no-border-radius" href="<?php _e('/la-neurofibromatose/', 'anfq'); ?>"><?php _e('En savoir plus', 'anfq'); ?></a>
               </div>
@@ -37,7 +37,7 @@ get_header();
             <div class="columns is-multiline">
               <div class="column is-left-part is-12-tablet is-12-desktop is-5-widescreen">
                 <h3 class="title"><?php _e('Notre mission', 'anfq'); ?></h3>
-                <p>Nous sommes heureux de vous accueillir pour partager avec vous notre vie associative dont la mission se veut pour la cause de la neurofibromatose.</p>
+                <p><?php echo get_field('mission'); ?></p>
               </div>
               <div class="column is-right-part is-12-tablet is-12-desktop is-7-widescreen">
                 <h2 class="title">
@@ -58,7 +58,7 @@ get_header();
                 <br/>
                 <div class="columns">
                   <div class="column is-one-third">
-                    <h4 class="title">
+                    <h4 class="title has-text-green">
                       <svg width="44px" height="28px" viewBox="0 0 44 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                               <g id="ANFQ---Accueil" transform="translate(-691.000000, -991.000000)" fill="#77BA43" fill-rule="nonzero" stroke="#77BA43" stroke-width="0.799999952">
@@ -69,12 +69,12 @@ get_header();
                           </g>
                       </svg>
                       &nbsp;
-                      28&nbsp;%
+                      <?php echo get_field('statistique_1_titre'); ?>
                     </h4>
-                    <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
+                    <p><?php echo get_field('statistique_1_description'); ?></p>
                   </div>
                   <div class="column is-one-third">
-                    <h4 class="title">
+                    <h4 class="title has-text-green">
                       <svg width="52px" height="30px" viewBox="0 0 52 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                               <g id="ANFQ---Accueil" transform="translate(-925.000000, -990.000000)" stroke="#77BA43" stroke-width="2.30399982">
@@ -91,13 +91,12 @@ get_header();
                               </g>
                           </g>
                       </svg>
-                      &nbsp;1000
+                      &nbsp;<?php echo get_field('statistique_2_titre'); ?>
                     </h4>
-                    <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
+                    <p><?php echo get_field('statistique_2_description'); ?></p>
                   </div>
                   <div class="column is-one-third">
-                    <h4 class="title">
-
+                    <h4 class="title has-text-green">
                       <svg width="43px" height="37px" viewBox="0 0 43 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                           <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                               <g id="ANFQ---Accueil" transform="translate(-1160.000000, -982.000000)" fill="#77BA43" fill-rule="nonzero">
@@ -107,9 +106,9 @@ get_header();
                               </g>
                           </g>
                       </svg>
-                      &nbsp;245
+                      &nbsp;<?php echo get_field('statistique_3_titre'); ?>
                     </h4>
-                    <p>sdjhfgas dfasdhfas djkfhasdkjfh sd</p>
+                    <p><?php echo get_field('statistique_3_description'); ?></p>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@ get_header();
               </div>
               <div class="column is-right-part is-5">
                 <h2 class="title"><?php _e('Faire un don' ,'anfq'); ?></h2>
-                <p>sdakjfhas dfsajdkfh asdf</p>
+                <p>Lorem impsum</p>
                 <br/>
                 <a class="button is-primary has-no-border-radius" href="<?php _e('/devenir-membre/#faire-un-don', 'anfq'); ?>"><?php _e('Faire un don' ,'anfq'); ?></a>
               </div>
@@ -167,7 +166,7 @@ get_header();
                 <h3 class="subtitle"><?php the_title(); ?></h3>
                 <p><?php echo get_post_meta(get_the_ID())['event-summary'][0]; ?></p>
                 <br/>
-                <a class="has-text-primary" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur facebook','anfq'); ?></a>
+                <a class="has-text-primary" href="<?php echo get_post_meta(get_the_ID())['event-link'][0]; ?>"><?php _e('M\'inscrire sur Facebook >','anfq'); ?></a>
               </div>
             </div>
             <?php endwhile; ?>

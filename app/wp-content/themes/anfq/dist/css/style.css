@@ -7030,6 +7030,19 @@ label.panel-block {
   padding-bottom: 3rem;
   background-color: #fff; }
 
+.facebook {
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 3rem; }
+
 .is-member-banner {
   overflow: hidden;
   background-color: #414647; }
@@ -7045,6 +7058,14 @@ label.panel-block {
 .is-mission-banner {
   overflow: hidden; }
   .is-mission-banner .is-left-part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 8rem 7rem; }
   .is-mission-banner .is-right-part {
     padding: 8rem 7rem;
@@ -7069,6 +7090,14 @@ label.panel-block {
   .is-promo-event-banner .is-right-part,
   .is-become-member-banner .is-right-part,
   .is-giving-banner .is-right-part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
     background-color: #f3faf9;
     padding: 8rem 7rem; }
   .is-promo-event-banner .is-background-image,
@@ -7122,3 +7151,6 @@ label.panel-block {
   .is-become-member-banner .is-right-part,
   .is-giving-banner .is-right-part {
     padding: 5rem 4rem; } }
+
+.slides a {
+  width: 100%; }

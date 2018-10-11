@@ -19,7 +19,7 @@ get_header();
             $loop = new WP_Query( $args );
             while ( $loop->have_posts() ) : $loop->the_post();
           ?>
-            <div class="box has-no-border-radius no-shadow">
+            <div class="box has-no-border-radius no-shadow" style="max-width: 1000px; margin-left: auto; margin-right: auto;">
               <div class="level">
                 <div class="level-left">
                   <h2 class="subtitle"><?php the_title(); ?></h2>
