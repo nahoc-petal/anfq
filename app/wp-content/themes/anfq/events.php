@@ -58,7 +58,7 @@ get_header();
       <section class="section events-to-come no-padding-top">
         <br/>
           <h2 class="title"><?php echo get_field('events_to_come'); ?></h2>
-          <div class="columns">
+          <div class="columns is-multiline">
             <?php
               $args = array( 
                 'post_type' => 'event',
@@ -71,7 +71,7 @@ get_header();
               while ( $loop->have_posts() ) : $loop->the_post();
                 if($count !== 0 && time() < get_post_meta(get_the_ID())['event-start-date'][0]):
             ?>
-            <div class="column">
+            <div class="column is-4">
               <div class="box has-no-border-radius">
                 <div class="level">
                   <div class="level-left">
